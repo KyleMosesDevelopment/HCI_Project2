@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TLO Online</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./images/texas-flag.jpg">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: rgb(26, 26, 131);
+      color: white;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+    
+    .ajorn-status {
+      margin: auto;
+      vertical-align: middle;
+    }
+
+    .jumbotron {
+        background-image: url('images/texas-flag4.webp');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    button {
+      background-color: rgb(26, 26, 131);
+      color: white;
+      border-radius: 50%;
+      border-color: rgba(201, 5, 5, 0.973);
+    }
+    .lonestar {
+      width: 50px;
+      height: 50px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">TLO</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><img class= "lonestar"src="./images/lone-star.webp"></li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#search">My TLO</a></li>
+        <li><a href="#house">House</a></li>
+        <li><a href="#senate">Senate</a></li>
+        <li><a href="#legislation">Legislation</a></li>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#house">Committees</a></li>
+        <li><a href="#house">Calendars</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1 style= "color:black; font-weight:bolder;">Texas Legislature Online</h1>      
+    <p style= "color:black; font-weight:bolder;">87th Legislature Regular Session</p>
+  </div>
+</div>
+
+<!--Search Bar-->
+<div class="container-fluid bg-3 text-center" id="search" >
+    <h3>Search Legislation</h3>
+    <input id="wordphrase" type="radio" value="wordphrase" name="radiobtn">
+    <label>Word/Phrase</label>
+    <input id="billnumber" type="radio" value="billnumber" name="radiobtn">
+    <label>Bill Number</label>
+    <select id="selectyear" style="width:117px;">
+        <option selected="selected" value="87R">87(R) - 2021</option>
+        <option value="86R">86(R) - 2019</option>
+        <option value="851">85(1) - 2017</option>
+        <option value="85R">85(R) - 2017</option>
+        <option value="84R">84(R) - 2015</option>
+        <option value="833">83(3) - 2013</option>
+        <option value="832">83(2) - 2013</option>
+        <option value="831">83(1) - 2013</option>
+        <option value="83R">83(R) - 2013</option>
+        <option value="821">82(1) - 2011</option>
+        <option value="82R">82(R) - 2011</option>
+        <option value="811">81(1) - 2009</option>
+        <option value="81R">81(R) - 2009</option>
+        <option value="80R">80(R) - 2007</option>
+        <option value="793">79(3) - 2006</option>
+        <option value="792">79(2) - 2005</option>
+        <option value="791">79(1) - 2005</option>
+        <option value="79R">79(R) - 2005</option>
+        <option value="784">78(4) - 2004</option>
+        <option value="783">78(3) - 2003</option>
+        <option value="782">78(2) - 2003</option>
+        <option value="781">78(1) - 2003</option>
+        <option value="78R">78(R) - 2003</option>
+        <option value="77R">77(R) - 2001</option>
+        <option value="76R">76(R) - 1999</option>
+        <option value="75R">75(R) - 1997</option>
+        <option value="74R">74(R) - 1995</option>
+        <option value="73R">73(R) - 1993</option>
+        <option value="724">72(4) - 1992</option>
+        <option value="723">72(3) - 1992</option>
+        <option value="722">72(2) - 1991</option>
+        <option value="721">72(1) - 1991</option>
+        <option value="72R">72(R) - 1991</option>
+        <option value="716">71(6) - 1990</option>
+        <option value="715">71(5) - 1990</option>
+        <option value="714">71(4) - 1990</option>
+        <option value="713">71(3) - 1990</option>
+        <option value="712">71(2) - 1989</option>
+        <option value="711">71(1) - 1989</option>
+        <option value="71R">71(R) - 1989</option>
+    </select><br>
+    <input type="text" placeholder="Search..">
+    <button id="searchbtn">Go</button>
+</div>
+<div class="container-fluid bg-3 text-center" >    
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>Additional Searches</h4>
+        <p>Text Search</p>
+        <p>Bill Search</p>
+        <p>Amendments</p>
+        <p>Sections Affected</p>
+        <p>Legislative Archive System</p>
+        <p>Statutes</p>
+        <p>Constitution</p>
+      </div>
+      <div class="col-sm-3">
+        <h4>How Do I ...</h4>
+        <p>Find list of filed bills?</p>
+        <p>Follow the status of a bill?</p>
+        <p>Contact my legislator?</p>
+        <p>Find how a legislator voted?</p>
+        <p>Find when hearings are scheduled?</p>
+        <p>View the text of a bill?</p>
+        <p>Testify at a House committee hearing?</p>
+      </div>
+      <div class="col-sm-3">
+        <h4>My TLO</h4>
+        <p>Track Legislation With Bill Lists</p>
+        <p>Receive Bill and Meeting Alerts</p>
+        <p>Subscribe to RSS Feeds</p>
+        <p>View Content on Mobile Device</p>
+        <p>Saved Bill, Text, Amendment Searches</p>
+      </div>
+      <div class="col-sm-3">
+        <h4>Who Represents Me?</h4>
+        <p>Enter your address to find who represents you in the legislature.</p>
+        <label>Address:</label>
+        <input type="text" name="address"><br>
+        <label>City:</label>
+        <input type="text" name="city"><br>
+        <label>ZIP Code:</label>
+        <input type="text" name="zip">
+        <button id="whorepme">Submit</button>
+      </div>
+    </div>
+  </div><br><br><hr>
+
+  <div style="width:100%;">
+      <div class="container-fluid bg-3 text-center" id="legislation">
+        <h3>Legislation</h3>
+        <img src='images/texas-flag.jpg'><br>    
+        <div class="row">
+            <div class="col-sm-3">
+                <button>Legislative Activity</button>
+            </div>
+            <div class="col-sm-3">
+                <button>Legislative Process</button>
+            </div>
+            <div class="col-sm-3">
+                <button>Redistriction</button>
+            </div>
+            <div class="col-sm-3">
+                <button>Capital Complex Info</button>
+            </div>
+        </div>
+    </div><br><br><hr>
+  </div>
+
+<!--Texas House-->
+<div class="container-fluid bg-3 text-center" id="house">    
+  <h3>Texas House</h3>
+  <h4 class="ajorn-status">House: Adjourned until Thu, Apr 8, 2021 10:00 am</h4><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Home</p>
+    </div>
+    <div class="col-sm-3"> 
+      <p>Speaker of the House</p>
+    </div>
+    <div class="col-sm-3"> 
+      <p>Members</p>
+    </div>
+    <div class="col-sm-3">
+      <p>Committees</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Calendars</p>
+    </div>
+    <div class="col-sm-3"> 
+      <p>Current Amendment</p>
+    </div>
+    <div class="col-sm-3"> 
+      <p>Journals</p>
+    </div>
+    <div class="col-sm-3">
+      <p>News</p>
+    </div>
+  </div>
+</div><br><br><hr>
+
+<!--Texas Senate -->
+<div class="container-fluid bg-3 text-center" id="senate">    
+    <h3>Texas Senate</h3>
+    <h4 class="ajorn-status">Senate: Adjourned until Thu, Apr 8, 2021 11:00 am</h4><br>
+    <div class="row">
+      <div class="col-sm-3">
+        <p>Home</p>
+      </div>
+      <div class="col-sm-3"> 
+        <p>Lieutenant Governor</p>
+      </div>
+      <div class="col-sm-3"> 
+        <p>Members</p>
+      </div>
+      <div class="col-sm-3">
+        <p>Committees</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid bg-3 text-center" >    
+    <div class="row">
+      <div class="col-sm-3">
+        <p>Calendars</p>
+      </div>
+      <div class="col-sm-3"> 
+        <p>Senate Research Center</p>
+      </div>
+      <div class="col-sm-3"> 
+        <p>Journals</p>
+      </div>
+      <div class="col-sm-3">
+        <p>News</p>
+      </div>
+    </div>
+    <br><br>
+  </div><br><br>
+<footer class="container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Help</p>
+    </div>
+    <div class="col-sm-3">
+      <p>FAQ</p>
+    </div>
+    <div class="col-sm-3">
+      <p>Contact</p>
+    </div>
+    <div class="col-sm-3">
+      <p>Policies</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
